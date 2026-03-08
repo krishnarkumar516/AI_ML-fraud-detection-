@@ -97,6 +97,26 @@ border-radius:5px;
 cursor:pointer;
 }
 
+/* SUBSCRIPTION BUTTON STYLE */
+.cards ul{
+padding-left:20px;
+}
+
+.cards button{
+margin-top:15px;
+background:#2563eb;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cards button:hover{
+background:#1d4ed8;
+}
+
 /* Footer */
 
 footer{
@@ -115,15 +135,43 @@ padding:20px;
 <!-- Navigation -->
 
 <nav>
-
 <a href="#home">Home</a>
 <a href="#project">Project</a>
 <a href="#models">Models</a>
+<a href="#projects">Projects</a>
 <a href="#colab">Colab</a>
 <a href="#dataset">Dataset</a>
+<a href="#pricing">Subscription</a>
 <a href="#contact">Contact</a>
-
 </nav>
+
+<!-- HERO SECTION -->
+<section style="
+background:linear-gradient(135deg,#0f172a,#1e3c72);
+color:white;
+padding:120px 20px;
+text-align:center">
+
+<h1 style="font-size:48px;margin-bottom:20px">
+AI Fraud Detection Platform
+</h1>
+
+<p style="font-size:18px;max-width:700px;margin:auto">
+Detect fraudulent credit card transactions using advanced machine learning
+algorithms and real-time data analytics.
+</p>
+
+<a href="#projects" style="
+background:#3b82f6;
+padding:14px 30px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+font-weight:bold">
+View AI Projects
+</a>
+
+</section>
 
 <!-- Home -->
 
@@ -191,8 +239,42 @@ Easy to interpret.
 
 </section>
 
-<!-- Results -->
+<!-- PROJECTS -->
+<section id="projects">
 
+<h2>AI & Data Science Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Credit Card Fraud Detection</h3>
+<p>Machine learning system to detect fraudulent credit card transactions.</p>
+<a href="https://colab.research.google.com/drive/19z3xIj1T62HRufsh5JESZz9YvNBvQXrF" target="_blank">
+View Notebook
+</a>
+</div>
+
+<div class="card">
+<h3>Customer Churn Prediction</h3>
+<p>Machine learning model to predict customer churn.</p>
+<a href="https://colab.research.google.com/" target="_blank">
+View Notebook
+</a>
+</div>
+
+<div class="card">
+<h3>Sales Prediction</h3>
+<p>AI model that forecasts future sales using datasets.</p>
+<a href="https://colab.research.google.com/" target="_blank">
+View Notebook
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- Results -->
 <section>
 
 <h2>Model Performance</h2>
@@ -266,7 +348,113 @@ Download Dataset
 </div>
 
 </section>
+<section>
 
+<h2>Fraud Detection Demo</h2>
+
+<p>Enter transaction details to simulate fraud detection prediction.</p>
+
+<form>
+
+<label>Transaction Amount</label>
+<input type="number" placeholder="Enter amount">
+
+<label>Transaction Time</label>
+<input type="number" placeholder="Enter time">
+
+<label>Location Risk Score</label>
+<input type="number" placeholder="Risk score">
+
+<button type="button" onclick="predictFraud()">Check Fraud Risk</button>
+
+</form>
+
+<p id="result" style="font-weight:bold;margin-top:20px"></p>
+
+</section>
+
+<script>
+
+function predictFraud(){
+
+let amount = document.querySelector("input").value
+
+if(amount > 2000){
+document.getElementById("result").innerHTML = "⚠️ High Fraud Risk"
+}else{
+document.getElementById("result").innerHTML = "✅ Transaction Looks Safe"
+}
+
+}
+
+</script>
+
+<!-- SUBSCRIPTION -->
+<section id="pricing">
+
+<h2>Fraud Detection Subscription</h2>
+
+<p>
+Subscribe to our AI-powered fraud detection system and monitor transactions in real time.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Basic Plan</h3>
+
+<h2>$5 / month</h2>
+
+<ul>
+<li>Fraud detection model access</li>
+<li>Up to 1000 transactions</li>
+<li>Email support</li>
+</ul>
+
+<button>Subscribe</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Professional Plan</h3>
+
+<h2>$15 / month</h2>
+
+<ul>
+<li>Real-time fraud detection</li>
+<li>Up to 10,000 transactions</li>
+<li>Priority support</li>
+</ul>
+
+<button>Subscribe</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Enterprise Plan</h3>
+
+<h2>$49 / month</h2>
+
+<ul>
+<li>Unlimited fraud detection</li>
+<li>API access</li>
+<li>24/7 support</li>
+</ul>
+
+<button>Subscribe</button>
+
+</div>
+
+</div>
+
+</section>
+
+  
 <!-- Contact -->
 
 <section id="contact">
@@ -292,15 +480,44 @@ Download Dataset
 
 <!-- Footer -->
 
-<footer>
+<footer style="background:#0a2540;color:white;padding:40px 20px">
 
-<p>AI Credit Card Fraud Detection Project</p>
+<div style="max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;gap:40px">
 
-<p>Machine Learning | Data Science | Artificial Intelligence</p>
+<div>
+<h3>AI Fraud Detection</h3>
+<p>
+Machine Learning based fraud detection system designed to
+identify suspicious credit card transactions.
+</p>
+</div>
+
+<div>
+<h3>Project</h3>
+<p><a href="#project" style="color:white;text-decoration:none">Project Overview</a></p>
+<p><a href="#models" style="color:white;text-decoration:none">ML Models</a></p>
+<p><a href="#dataset" style="color:white;text-decoration:none">Dataset</a></p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Name: Krishna Kumar</p>
+<p>Email: krishnarkumar516@gmail.com</p>
+<p>Location: Coimbatore, India</p>
+</div>
+
+</div>
+
+<hr style="margin-top:30px;border:0;border-top:1px solid #ccc">
+
+<p style="text-align:center;margin-top:20px">
+© 2026 Krishna Kumar | AI Credit Card Fraud Detection
+</p>
 
 </footer>
 
 </body>
 
 </html>
+
 
