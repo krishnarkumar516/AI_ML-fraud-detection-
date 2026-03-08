@@ -1,98 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>AI Project Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Credit Card Fraud Detection</title>
 
 <style>
+
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
-background:#f5f5f5;
+background:#f4f6f9;
+color:#333;
 }
 
-header{
-background:#222;
-color:white;
-padding:20px;
-text-align:center;
-}
+/* Navigation */
 
 nav{
-background:#444;
-padding:10px;
-text-align:center;
+background:#0a2540;
+padding:15px;
+position:sticky;
+top:0;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
 
-.container{
-padding:40px;
+/* Header */
+
+header{
+background:linear-gradient(120deg,#1e3c72,#2a5298);
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
+
+/* Cards */
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .card{
 background:white;
 padding:20px;
-margin:20px;
 border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+flex:1;
+min-width:250px;
 }
 
+/* Dataset */
+
+.dataset{
+background:#eef2f7;
+padding:30px;
+border-radius:10px;
+}
+
+/* Contact */
+
+form input, form textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+background:#1e3c72;
+color:white;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* Footer */
+
 footer{
-background:#222;
+background:#0a2540;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
 }
+
 </style>
 
 </head>
 
 <body>
 
-<header>
-<h1>AI Project Hub</h1>
-<p>Machine Learning Projects, Code & Datasets</p>
-</header>
+<!-- Navigation -->
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Projects</a>
-<a href="#">Datasets</a>
-<a href="#">Tutorials</a>
-<a href="#">Contact</a>
+
+<a href="#home">Home</a>
+<a href="#project">Project</a>
+<a href="#models">Models</a>
+<a href="#colab">Colab</a>
+<a href="#dataset">Dataset</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
-<div class="container">
+<!-- Home -->
+
+<header id="home">
+
+<h1>AI Credit Card Fraud Detection</h1>
+
+<p>
+Machine Learning based system to detect fraudulent credit card transactions using advanced data analytics.
+</p>
+
+</header>
+
+<!-- Project Overview -->
+
+<section id="project">
+
+<h2>Project Overview</h2>
+
+<p>
+
+Credit card fraud detection is an important financial security problem.  
+This project uses machine learning models to analyze transaction data and detect fraudulent activities in real time.
+
+The dataset contains **284,807 transactions and 31 features**.  
+The model analyzes transaction patterns and identifies suspicious behavior.
+
+</p>
+
+</section>
+
+<!-- Models Section -->
+
+<section id="models">
+
+<h2>Machine Learning Models Used</h2>
+
+<div class="cards">
 
 <div class="card">
-<h2>Credit Card Fraud Detection</h2>
-<p>Machine learning model to detect fraudulent credit card transactions.</p>
-<a href="#">View Project</a>
+<h3>Random Forest</h3>
+<p>
+Ensemble learning algorithm used for classification.
+Provides high accuracy and strong fraud detection capability.
+</p>
 </div>
 
 <div class="card">
-<h2>Customer Churn Prediction</h2>
-<p>Predict customers likely to leave a service using ML models.</p>
-<a href="#">View Project</a>
+<h3>Logistic Regression</h3>
+<p>
+Statistical model used for binary classification.
+Efficient for fraud vs non-fraud detection.
+</p>
 </div>
 
 <div class="card">
-<h2>Resume Analyzer AI</h2>
-<p>AI tool to analyze resumes and match them with job descriptions.</p>
-<a href="#">View Project</a>
+<h3>Decision Tree</h3>
+<p>
+Tree based model that learns decision rules from transaction data.
+Easy to interpret.
+</p>
 </div>
 
 </div>
+
+</section>
+
+<!-- Results -->
+
+<section>
+
+<h2>Model Performance</h2>
+
+<ul>
+
+<li>Accuracy : 99%</li>
+<li>Precision : 0.97</li>
+<li>Recall : 0.94</li>
+<li>F1 Score : 0.95</li>
+
+</ul>
+
+<p>
+
+Evaluation metrics include confusion matrix, ROC curve, and feature correlation heatmap to measure fraud detection performance.
+
+</p>
+
+</section>
+
+<!-- Google Colab -->
+
+<section id="colab">
+
+<h2>Project Implementation (Google Colab)</h2>
+
+<p>
+The full machine learning implementation including data preprocessing,
+model training, and evaluation is available in the Google Colab notebook below.
+</p>
+
+<iframe 
+src="https://colab.research.google.com/drive/19z3xIj1T62HRufsh5JESZz9YvNBvQXrF#scrollTo=roTcNZdQpVqn"
+width="100%" 
+height="600">
+</iframe>
+
+</section>
+
+<!-- Dataset -->
+
+<section id="dataset">
+
+<h2>Dataset Information</h2>
+
+<div class="dataset">
+
+<ul>
+
+<li>Total Transactions : 284,807</li>
+<li>Fraud Cases : 492</li>
+<li>Features : 31</li>
+<li>Dataset Source : Kaggle</li>
+
+</ul>
+
+<p>
+
+The dataset contains anonymized features obtained using PCA transformation.
+Only "Time" and "Amount" features are not transformed.
+
+</p>
+
+<a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">
+
+Download Dataset
+
+</a>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="KRISHNA KUMAR R">
+
+<label>Email</label>
+<input type="email" placeholder="Krishnarkumar516@gmail.com">
+
+<label>Message</label>
+<textarea rows="5" placeholder="Write your message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<!-- Footer -->
 
 <footer>
-<p>© 2026 AI Project Hub</p>
+
+<p>AI Credit Card Fraud Detection Project</p>
+
+<p>Machine Learning | Data Science | Artificial Intelligence</p>
+
 </footer>
 
 </body>
+
 </html>
